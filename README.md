@@ -9,3 +9,9 @@ python, flask
 
 
 
+## Legal Notice
+
+- This project is for educational purposes only.
+- Scraping websites might violate their terms of service. Always check the terms before scraping and obtain proper authorization if necessary.
+- The author is not responsible for any misuse of this code.
+- Make sure to handle the data responsibly and comply with all relevant laws and regulations.
