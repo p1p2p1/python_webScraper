@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  />
+  <link rel="shortcut icon" href="#">
+  <title>Job Scrapper</title>
+</head>
+
+<body>
+  <main class = "container">
+    <h1>Search Results for : {{keyword}}</h1>
+
+    <h2>berlin startup jobs</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">title</th>
+          <th scope="col">company</th>
+          <th scope="col">discription</th>
+          <th scope="col">url</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for job in berlin_jobs %}
+          <tr>
+            <th scope = "row">{{job.title}}</td>
+            <td>{{job.company}}</td>
+            <td>{{job.description}}</td>
+            <td><a href = "{{job.url}}">{{job.url}}</a></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>WWR</h2>
+    <table>
+        <thead>
+          <tr>
+            <th scope="col">title</th>
+            <th scope="col">company</th>
+            <th scope="col">discription</th>
+            <th scope="col">url</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for job in wwr_jobs %}
+            <tr>
+              <th scope = "row">{{job.title}}</td>
+              <td>{{job.company}}</td>
+              <td>{{job.description}}</td>
+              <td><a href = "{{job.url}}">{{job.url}}</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <h2>Web3 Jobs</h2>
+      <table>
+          <thead>
+            <tr>
+              <th scope="col">title</th>
+              <th scope="col">company</th>
+              <th scope="col">discription</th>
+              <th scope="col">url</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for job in web3_jobs %}
+              <tr>
+                <th scope = "row">{{job.title}}</td>
+                <td>{{job.company}}</td>
+                <td>{{job.description}}</td>
+                <td><a href = "{{job.url}}">{{job.url}}</a></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+  </main>
+
+  <form action="/">
+        <button>home</button>
+  </form>
+</body>
+</html>
+
